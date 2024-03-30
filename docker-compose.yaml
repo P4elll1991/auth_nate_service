@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  auth:
+    networks:
+      - service-net
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8081
+    env_file:
+      - .env
+networks:
+  service-net:
+    driver: bridge
