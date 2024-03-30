@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println("START")
+	fmt.Println("START APPLICATION")
 
 	handler.New(service.NewJWTService()).Run()
 }
